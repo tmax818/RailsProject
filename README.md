@@ -1,11 +1,10 @@
-# README
+# Rails Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my Rails Project for [Flatiron School](https://flatironschool.com/). You can see other projects I have completed on my [website](http://tylermaxwell.info/tylermaxwell/).
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.4.1
 
 * System dependencies
 
