@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class GenreTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  def setup
+    @genre = Genre.new
+  end
+
+  test "name should be present" do
+    @genre.name = "   "
+    assert_not @genre.valid?
+  end
 end
