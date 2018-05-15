@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   root 'static#home'
   get 'about',       to: 'static#about'
   get 'help',       to: 'static#help'
