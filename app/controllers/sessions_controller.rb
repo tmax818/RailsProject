@@ -15,5 +15,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    log_out
+    flash[:danger] = "Goodbye, thank you for using Library Tracker!"
+    redirect_to root_path
   end
 end
