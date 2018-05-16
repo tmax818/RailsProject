@@ -1,12 +1,18 @@
-<% provide(:title, @user.name) %>
+<% provide(:title, current_user.name) %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+
       </h1>
-      <%= link_to "Your Books", user_books_path(@user), class: "btn btn-sm btn-primary"%>
+
+      <% @books.each do |b| %>
+      <ul>
+        <li><%= b.title %> by: <%= b.author %></li>
+      </ul>
+      <% end %>
+
+      <%= link_to "Your Books", '#', class: "btn btn-sm btn-primary"%>
       <%= link_to "Your Reviews", '#', class: "btn btn-sm btn-primary" %>
       <%= link_to "Add Book", '#', class: "btn btn-sm btn-primary" %>
       <%= link_to "Add Review", '#', class: "btn btn-sm btn-primary" %>
