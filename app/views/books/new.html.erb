@@ -13,6 +13,12 @@
       <%= f.label :author %>
       <%= f.text_field :author, class: 'form-control' %>
 
+     <%= f.fields_for 'reviews_attributes', @review do |rev| %>
+     <%= rev.label :content %>
+     <%= rev.text_area :content %>
+
+     <% end %>
+
       <%= f.submit "Create Book", class: "btn btn-primary" %>
 
     <% end %>

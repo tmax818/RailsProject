@@ -7,8 +7,7 @@
         <%= @user.name %>
       </h1>
       <%= link_to "Your Books", user_books_path(@user), class: "btn btn-sm btn-primary"%>
-      <%= link_to "Your Reviews", '#', class: "btn btn-sm btn-primary" %>
-      <%= link_to "Add Book", '#', class: "btn btn-sm btn-primary" %>
+      <%= link_to "Add Book", new_user_book_path(@user), class: "btn btn-sm btn-primary" %>
       <%= link_to "Add Review", '#', class: "btn btn-sm btn-primary" %>
   </aside>
 </div>

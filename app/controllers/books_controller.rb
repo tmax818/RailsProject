@@ -5,7 +5,8 @@ class BooksController < ApplicationController
       @books = current_user.books
       flash.now[:danger] = "You don't have any books yet" if @books.empty?
     else
-      @books = Book.all
+      flash[:danger] = "Please log in or sign up."
+      redirect_to root_path
     end
   end
 
@@ -17,18 +18,11 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
-  def edit
-
-  end
-
   def create
-    @book = Book.new(book_params)
-    if @book.save
+      @book = Book.create(book_params)
       flash[:success] = "Book was added"
-      redirect_to @book
-    else
-      render :new
-    end
+      redirect_to root_path
+      debugger
   end
 
   def update
@@ -41,7 +35,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:author, :title, :genre_id)
+    params.require(:book).permit(:author, :title, reviews_attributes:[:content])
   end
 
 end
