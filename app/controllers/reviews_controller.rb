@@ -14,8 +14,12 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.create(review_params)
-    @review.user_id = current_user.id 
-    debugger
+    @review.user_id = current_user.id
+     if @review.save
+       redirect_to @review
+     else
+       render :new
+     end
   end
 
   private

@@ -1,3 +1,5 @@
+<%= provide(:title, "#{current_user.name}'s Books") %>
+
 <h1>Book Index Page</h1>
 <% @books.each do |x| %>
   <div class="row">
