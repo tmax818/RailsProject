@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(name: "Joe Reader", email: "tmax818@mac.com", password: "asdfas", password_confirmation: "asdfas")
-User.create(name: "Jane Reader", email: "itsjane@earthlink.com", password: "asdfas", password_confirmation: "asdfas")
+User.create(name: "Jane Doe", email: "itsjane@e.com", password: "asdfas", password_confirmation: "asdfas")
 User.create(name: "New Guy", email: "fng@aol.com", password: "asdfas", password_confirmation: "asdfas")
 
 Genre.create(name: "Fiction")
@@ -23,7 +23,7 @@ Book.create(title: "Island" , author: "Aldous Huxley" , genre_id: 1)
 
 Review.create(content: "This is the First Review in the Database seed file... it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , book_id: 1, user_id: 1)
 
-Review.create(content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , book_id: 2, user_id: 1)
+Review.create(content: "This book has two reviews by two different users. This is the first one. nsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , book_id: 2, user_id: 1)
 
 Review.create(content: "I wish I had read this before I voted for Trump. Dammit. Oh, well. Learning NewSpeak isn't so hard! sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenda asd riae eu fugiat nulla paria", book_id: 2, user_id: 2)
 
