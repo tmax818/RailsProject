@@ -1,4 +1,8 @@
-<%= @review.content %>
+
+<h3><%= @review.book.title %> By: <%= @review.book.author %></h3>
+<h4>Review By: <%= @review.user.name %></h4>
+<p><%= @review.content %></p>
+
 <br>
 <br>
 <%= render 'layouts/shared/links' %>

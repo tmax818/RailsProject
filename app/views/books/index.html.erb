@@ -1,0 +1,18 @@
+<h1>Book Index Page</h1>
+<% @books.each do |x| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="center">
+      </section>
+    </div>
+    <div class="col-md-8 well">
+      <h4><%=link_to x.title, book_path(x) %> By: <%= x.author %></h4>
+
+      <p><span class="quiet"><small>Created<%= time_ago_in_words(x.created_at)%>
+        ago</small></span></p>
+    </div>
+  </div>
+<% end %>
+<br>
+
+ <%= render 'layouts/shared/links' %>
