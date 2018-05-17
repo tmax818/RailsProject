@@ -8,7 +8,7 @@ class StaticController < ApplicationController
   end
 
   def about
-
+    @books = Book.all
   end
 
 end
