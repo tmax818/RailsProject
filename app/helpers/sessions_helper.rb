@@ -17,4 +17,26 @@ module SessionsHelper
     @current_user = nil
   end
 
+  def valid_reg_user(user)
+    if user && user.authenticate(params[:session][:password])
+      log_in user
+      flash[:success] = "Welcome Back #{user.name.capitalize}"
+      redirect_to user
+    else
+      flash.now[:danger] = "Invalid email/password combination."
+      render :new
+    end
+  end
+
+  def valid_google_user(user)
+    if user && user.authenticate(user.password)
+      log_in(user)
+      flash[:success] = "Welcome  #{user.name.capitalize}"
+      redirect_to user
+    else
+      flash.now[:danger] = "Invalid email/password combination."
+      render :new
+    end
+  end
+
 end

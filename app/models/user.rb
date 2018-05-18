@@ -10,8 +10,24 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :books, through: :reviews
 
-  def self.create_by_google(auth)
-    self.create(name: auth.info.name, email: auth.info.email, password: auth.uid, password_confirmation: auth.uid)
-  end
+  # def self.create_by_google(auth)
+  #   @user = self.find_by(email: auth.info.email)
+  #   if @user
+  #     @user
+  #   else
+  #     @user = self.create(name: auth.info.name, email: auth.info.email, password: auth.info.last_name, password_confirmation: auth.info.last_name)
+  #   end
+  # end
 
+  def self.create_by_google(auth)
+    user = self.find_or_create_by(name: auth.info.name, email: auth.info.email)
+    if user.save
+      user
+    else
+      user.password = auth.info.email
+      user.password_confirmation = auth.info.email
+      user.save
+      user
+    end
+  end
 end

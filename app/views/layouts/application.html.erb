@@ -14,7 +14,6 @@
     <div class="container">
     <%= render 'layouts/shared/flash' %>
     <%= yield %>
-        <a href="/auth/google_oauth2" class="btn btn-danger">Log in with Google+</a>
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
     </div>

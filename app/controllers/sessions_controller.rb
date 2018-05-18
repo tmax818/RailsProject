@@ -3,21 +3,15 @@ class SessionsController < ApplicationController
   end
 
   def create
+
     if params[:session]
       user = User.find_by(email: params[:session][:email])
-        debugger
+      valid_reg_user(user)
     else
       user = User.create_by_google(auth)
+      valid_google_user(user)
     end
-    if user && user.authenticate(user.password)
-      log_in user
-      flash[:success] = "Welcome Back #{user.name.capitalize}"
-      debugger
-      redirect_to user
-    else
-      flash.now[:danger] = "Invalid email/password combination."
-      render :new
-    end
+
   end
 
   def destroy
