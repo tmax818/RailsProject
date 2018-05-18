@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :genres
   resources :reviews
-  resources :books, only: [:new, :show]
+  resources :books, only: [:new, :create, :show]
 
   resources :users do
     resources :books, only: [:index]
