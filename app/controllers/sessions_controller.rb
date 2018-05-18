@@ -3,10 +3,16 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email])
-    if user && user.authenticate(params[:session][:password])
+    if params[:session]
+      user = User.find_by(email: params[:session][:email])
+        debugger
+    else
+      user = User.create_by_google(auth)
+    end
+    if user && user.authenticate(user.password)
       log_in user
       flash[:success] = "Welcome Back #{user.name.capitalize}"
+      debugger
       redirect_to user
     else
       flash.now[:danger] = "Invalid email/password combination."
@@ -19,4 +25,10 @@ class SessionsController < ApplicationController
     flash[:danger] = "Goodbye, thank you for using Library Tracker!"
     redirect_to root_path
   end
+
+  private
+
+    def auth
+      request.env['omniauth.auth']
+    end
 end

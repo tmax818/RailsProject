@@ -9,4 +9,9 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6}
   has_many :reviews
   has_many :books, through: :reviews
+
+  def self.create_by_google(auth)
+    self.create(name: auth.info.name, email: auth.info.email, password: auth.uid, password_confirmation: auth.uid)
+  end
+
 end
