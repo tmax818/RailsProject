@@ -1,7 +1,6 @@
 class Book < ApplicationRecord
   validates :author_first, presence: true
-  validates :author_last, presence: true
-  validates :title, presence: true, uniqueness: {case_sensitive: true}
+  validates :title, presence: true, uniqueness: {case_sensitive: false}
 
   belongs_to :genre
   has_many :reviews

@@ -12,6 +12,13 @@ User.create(name: "New Guy", email: "fng@aol.com", password: "asdfas", password_
 
 Genre.create(name: "Fiction")
 Genre.create(name: "Non-Fiction")
+Genre.create(name: "History")
+Genre.create(name: "Computers/Programminng")
+Genre.create(name: "Philosophy")
+Genre.create(name: "Sci-fi")
+Genre.create(name: "Fantasy")
+Genre.create(name: "Auto-/Biography")
+Genre.create(name: "Reference")
 
 Book.create(title: "Disgrace" , author_first: "J.M.", author_last: "Coetzee" , genre_id: 1)
 Book.create(title: "1984" , author_first: "George", author_last: "Orwell" , genre_id: 1)
