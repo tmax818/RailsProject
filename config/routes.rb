@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   root  'static#home'
 
-  get     'author',      to: 'static#author'
-  get     'title',       to: 'static#title'
+  get     'by_author',      to: 'static#author'
+  get     'by_title',       to: 'static#title'
   get     'signup',     to: 'users#new'
   post    'signup',     to: 'users#create'
   get     'login',      to: 'sessions#new'

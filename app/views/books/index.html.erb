@@ -1,6 +1,6 @@
 <%= provide(:title, "#{current_user.name}'s Books") %>
 
-<h1>Book Index Page</h1>
+<h1><%= current_user.name %>'s Books</h1>
 <% @books.each do |x| %>
   <div class="row">
     <div class="col-md-2">
@@ -15,7 +15,3 @@
     </div>
   </div>
 <% end %>
-<br>
-  <% if logged_in? %>
- <%= render 'layouts/shared/links' %>
- <% end %>
