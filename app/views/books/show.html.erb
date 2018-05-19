@@ -2,12 +2,11 @@
 
 <h1>Book Show Page</h1>
 
-
-
 <h3><%= @book.title %> By: <%= @book.author_last %></h3>
 <h3> Genre: <%= @book.genre.name %></h3>
 
 
 <br>
-<br>
+<% if logged_in? %>
 <%= render 'layouts/shared/links' %>
+<% end %>

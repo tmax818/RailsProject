@@ -4,11 +4,11 @@ class StaticController < ApplicationController
   end
 
   def title
-
+    @books = Book.order_by_title
   end
 
   def author
-    @books = Book.all
+    @books = Book.order_by_author
   end
 
 end
