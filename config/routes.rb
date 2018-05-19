@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   root  'static#home'
 
-  get     'about',      to: 'static#about'
-  get     'help',       to: 'static#help'
+  get     'by_author',      to: 'static#author'
+  get     'by_title',       to: 'static#title'
   get     'signup',     to: 'users#new'
   post    'signup',     to: 'users#create'
   get     'login',      to: 'sessions#new'
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :genres
   resources :reviews
-  resources :books, only: [:new, :show]
+  resources :books, only: [:new, :create, :show]
 
   resources :users do
     resources :books, only: [:index]

@@ -3,8 +3,8 @@
 <%= link_to "Library Tracker", root_path, id: "logo" %>
 <nav>
   <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to "About",  about_path %></li>
-    <li><%= link_to "Help",   help_path %></li>
+    <li><%= link_to "Books by Author",  by_author_path %></li>
+    <li><%= link_to "Books by Title",   by_title_path %></li>
     <% if logged_in? %>
     <li><%= link_to "User Home", user_path(current_user.id)%></li>
     <li><%= link_to "Log out", logout_path, method: :delete, class: "btn btn-lg btn-default" %></li>
