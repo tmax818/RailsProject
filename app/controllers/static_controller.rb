@@ -3,12 +3,12 @@ class StaticController < ApplicationController
   def home
   end
 
-  def help
-
+  def title
+    @books = Book.order_by_title
   end
 
-  def about
-    @books = Book.all
+  def author
+    @books = Book.order_by_author
   end
 
 end
