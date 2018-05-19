@@ -1,9 +1,8 @@
 <%= provide(:title, "#{@review.book.title}") %>
 
-<h3><%= @review.book.title %> By: <%= @review.book.author_last %></h3>
+<h3><%= link_to @review.book.title, book_path(@review.book.id) %> By: <%= @review.book.author_first %> <%= @review.book.author_last %></h3>
 <h4>Review By: <%= @review.user.name %></h4>
 <p><%= @review.content %></p>
 
 <br>
 <br>
-<%= render 'layouts/shared/links' %>
