@@ -13,17 +13,20 @@ User.create(name: "New Guy", email: "fng@aol.com", password: "asdfas", password_
 Genre.create(name: "Fiction")
 Genre.create(name: "Non-Fiction")
 
-Book.create(title: "Disgrace" , author: "J.M.Coetzee" , genre_id: 1)
-Book.create(title: "1984" , author: "George Orwell" , genre_id: 1)
-Book.create(title: "The Joke" , author: "Milan Kundera" , genre_id: 1)
-Book.create(title: "Ulysses" , author: "James Joyce" , genre_id: 1)
-Book.create(title: "Emma" , author: "Jane Austin" , genre_id: 1)
-Book.create(title: "Infinite Jest" , author: "David Foster Wallace" , genre_id: 1)
-Book.create(title: "Island" , author: "Aldous Huxley" , genre_id: 1)
+Book.create(title: "Disgrace" , author_first: "J.M.", author_last: "Coetzee" , genre_id: 1)
+Book.create(title: "1984" , author_first: "George", author_last: "Orwell" , genre_id: 1)
+Book.create(title: "The Joke" , author_first: "Milan", author_last: "Kundera" , genre_id: 1)
+Book.create(title: "Ulysses" , author_first: "James", author_last: "Joyce" , genre_id: 1)
+Book.create(title: "Emma" , author_first: "Jane", author_last: "Austin" , genre_id: 1)
+Book.create(title: "Island" , author_first: "Aldous", author_last: "Huxley" , genre_id: 1)
 
 Review.create(content: "This is the First Review in the Database seed file... it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , book_id: 1, user_id: 1)
 
 Review.create(content: "This is the second review for Disgrace it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , book_id: 1, user_id: 2)
+
+Review.create(content: "This book has two reviews by two different users. This is the first one. nsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , book_id: 2, user_id: 1)
+
+Review.create(content: "This book has two reviews by two different users. This is the first one. nsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , book_id: 2, user_id: 1)
 
 Review.create(content: "This book has two reviews by two different users. This is the first one. nsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , book_id: 2, user_id: 1)
 
