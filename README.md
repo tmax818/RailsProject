@@ -2,7 +2,7 @@
 
 ## Reader's Library Tracker
 
-This is my Rails Project for [Flatiron School](https://flatironschool.com/). Requirements for the project can be found [here]
+This is my Rails Project for [Flatiron School](https://flatironschool.com/). Requirements for the project can be found [here].
 
 [here]: /spec.md
 
@@ -28,8 +28,13 @@ This is my Rails Project for [Flatiron School](https://flatironschool.com/). Req
 rails db:setup
 ```
 
-* How to run the test suite
+* How to run the test suite: A few [tests] are included and use the native Rails testing environment. They can be accessed by running:
 
-* Deployment instructions:
+[tests]: /test/models/
 
-* ...
+```
+rails test
+```
+in the console.
+
+* Deployment instructions: Copy and clone the [repository](https://github.com/tmax818/RailsProject.git) for the Reader's Library Tracker.
