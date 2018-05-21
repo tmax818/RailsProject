@@ -1,23 +1,35 @@
 # Rails Project
 
-This is my Rails Project for [Flatiron School](https://flatironschool.com/). You can see other projects I have completed on my [website](http://tylermaxwell.info/tylermaxwell/).
+## Reader's Library Tracker
 
-Things you may want to cover:
+This is my Rails Project for [Flatiron School](https://flatironschool.com/). Requirements for the project can be found [here]
 
-* Ruby version 2.4.1
+[here]: /spec.md
 
-* System dependencies
+ You can see other projects I have completed on my [website](http://tylermaxwell.info/tylermaxwell/).
 
-* Configuration
+### About
 
-* Database creation
+* This project is written in Ruby version 2.4.1 and Rails version 5.2.0.
 
-* Database initialization
+* System dependencies: The Gemfile contains the following gems for login/sign in functionality:
+
+  - [omniauth-google-oauth2](https://rubygems.org/gems/omniauth-google-oauth2/versions/0.4.1)
+  - [omniauth](https://rubygems.org/gems/omniauth)
+
+
+* Database creation: A [seed file] is included in with the repository.
+
+[seed file]: /db/seed.rb
+
+* Database initialization: The data in the aforementioned [seed file] can be inserted into the database by running:
+
+```
+rails db:setup
+```
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Deployment instructions:
 
 * ...
