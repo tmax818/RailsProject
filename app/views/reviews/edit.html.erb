@@ -1,9 +1,9 @@
-<%= provide(:title, "New Review") %>
+<%= provide(:title, "Edit Review") %>
 
-<h1>New Review</h1>
+<h1>Edit Review</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= render 'layouts/shared/error_messages', holder: @review %>
+  <%= render 'layouts/shared/error_messages', holder: @review %>
     <%= form_for @review do |f| %>
 
       <%= f.label :content %>

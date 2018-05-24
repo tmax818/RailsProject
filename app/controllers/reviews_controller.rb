@@ -12,6 +12,10 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
+  def edit
+    @review = Review.find(params[:id])
+  end
+
   def create
     @review = Review.create(review_params)
     @review.user_id = current_user.id
@@ -20,6 +24,20 @@ class ReviewsController < ApplicationController
      else
        render :new
      end
+  end
+
+  def update
+    @review = Review.find(params[:id])
+
+    if @review.update(review_params)
+      redirect_to @review
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+
   end
 
   private
