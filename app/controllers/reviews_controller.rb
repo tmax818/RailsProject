@@ -39,7 +39,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     flash[:danger] = "Review Deleted"
-    redirect_to @review
+    redirect_to user_path(current_user.id)
   end
 
   private

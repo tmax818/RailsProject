@@ -1,13 +1,12 @@
 <%= provide(:title, "#{@book.title}") %>
 
 <h1><%= @book.title %></h1>
-
-<h3><%= @book.title %> By: <%= @book.author_first %> <%= @book.author_last %></h3>
+<h3>By: <%= @book.author_first %> <%= @book.author_last %></h3>
 <h3> Genre: <%= @book.genre.name %></h3>
 <h3> All Reviews for <%= @book.title %>: </h3>
 <% @book.reviews.each do |br| %>
 <ul>
-  <li><%= br.content %></li>
+  <li><%= link_to br.user.name, review_path(br) %></li>
 </ul>
 
 <% end %>
