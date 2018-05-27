@@ -4,7 +4,7 @@
 
 <h3><%= @book.title %> By: <%= @book.author_first %> <%= @book.author_last %></h3>
 <h3> Genre: <%= @book.genre.name %></h3>
-<h3> Reviews: </h3>
+<h3> All Reviews for <%= @book.title %>: </h3>
 <% @book.reviews.each do |br| %>
 <ul>
   <li><%= br.content %></li>
