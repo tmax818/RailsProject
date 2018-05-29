@@ -2,13 +2,13 @@ Rails.application.routes.draw do
 
   root  'static#home'
 
-  get     'by_author',  to: 'static#author'
-  get     'by_title',   to: 'static#title'
-  get     'signup',     to: 'users#new'
-  post    'signup',     to: 'users#create'
-  get     'login',      to: 'sessions#new'
-  post    'login',      to: 'sessions#create'
-  delete  'logout',     to: 'sessions#destroy'
+  get     'books/by_author',  to: 'static#author'
+  get     'books/by_title',   to: 'static#title'
+  get     'signup',           to: 'users#new'
+  post    'signup',           to: 'users#create'
+  get     'login',            to: 'sessions#new'
+  post    'login',            to: 'sessions#create'
+  delete  'logout',           to: 'sessions#destroy'
 
   resources :genres
   resources :reviews
