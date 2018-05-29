@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  validates :content, presence: true, length: {minimum: 140}
+  validates :content, presence: true, length: {minimum: 14}
 
   belongs_to :book
   belongs_to :user

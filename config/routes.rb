@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   root  'static#home'
 
-  get     'by_author',      to: 'static#author'
-  get     'by_title',       to: 'static#title'
+  get     'by_author',  to: 'static#author'
+  get     'by_title',   to: 'static#title'
   get     'signup',     to: 'users#new'
   post    'signup',     to: 'users#create'
   get     'login',      to: 'sessions#new'
@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :books, only: [:index]
     resources :reviews, only: [:new, :create, :show]
-
   end
 
   get 'auth/:provider/callback', to: 'sessions#create'
